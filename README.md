@@ -49,19 +49,62 @@ needed. Measured on an everyday laptop:
 
 ## Try it
 
-1. Install [Rust](https://www.rust-lang.org/tools/install).
-2. Download this project and open a terminal in its folder.
-3. Run:
+### 1. Install Rust
 
-   ```sh
-   cargo run --release
-   ```
+**Windows** - open PowerShell and run:
 
-Tapsi opens in a window on your computer. On a real kiosk screen, start it in full-screen mode:
+```powershell
+winget install Rustlang.Rustup
+```
+
+If the installer asks for the Visual Studio C++ build tools, let it install them. You can also
+download the installer from [rustup.rs](https://rustup.rs).
+
+**macOS** - open Terminal and run:
+
+```sh
+xcode-select --install
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+**Linux** - open a terminal and run:
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+On Ubuntu or Debian, also install a few system packages:
+
+```sh
+sudo apt install build-essential libxkbcommon-dev libgl1-mesa-dev libwayland-dev libx11-dev
+```
+
+When it's done, close the terminal and open a new one.
+
+### 2. Get Tapsi
+
+```sh
+git clone https://github.com/adam-ctrlc/tapsi.git
+cd tapsi
+```
+
+No Git? Click the green **Code** button on this page, choose **Download ZIP**, unzip it and open a
+terminal in that folder.
+
+### 3. Run it
+
+```sh
+cargo run --release
+```
+
+The first run takes a few minutes to build; after that Tapsi starts right away. It opens in a window
+on your computer. On a real kiosk screen, start it in full-screen mode:
 
 ```sh
 cargo run --release -- --kiosk
 ```
+
+Press **Ctrl + Shift + Q** to close it when running full screen.
 
 ## Make it yours
 
