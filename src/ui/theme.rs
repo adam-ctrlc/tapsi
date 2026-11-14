@@ -1,4 +1,4 @@
-//! Colors, fonts and global style: a clean, iOS-inspired look — flat surfaces,
+//! Colors, fonts and global style: a clean, iOS-inspired look - flat surfaces,
 //! hairline borders instead of shadows, and one brand accent color.
 
 use std::sync::Arc;
@@ -64,7 +64,7 @@ pub fn hairline() -> Stroke {
     Stroke::new(HAIRLINE, BORDER)
 }
 
-/// Soft drop shadow — reserved for the animated start screen.
+/// Soft drop shadow, reserved for the animated start screen.
 pub fn soft_shadow() -> Shadow {
     Shadow { offset: [0, 6], blur: 22, spread: 0, color: Color32::from_black_alpha(24) }
 }

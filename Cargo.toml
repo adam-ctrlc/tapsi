@@ -1,11 +1,12 @@
 [package]
-name = "kiosk"
+name = "tapsi"
 version = "0.1.0"
+authors = ["Adam"]
 edition = "2021"
-description = "Touch-screen self-ordering kiosk for quick-service restaurants"
+description = "Tapsi: a fast touch-screen self-ordering kiosk for quick-service restaurants"
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/adam-ctrlc/self-ordering-kiosk"
+repository = "https://github.com/adam-ctrlc/tapsi"
 keywords = ["kiosk", "self-ordering", "restaurant", "egui", "touchscreen"]
 categories = ["gui"]
 

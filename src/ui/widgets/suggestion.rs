@@ -15,7 +15,7 @@ pub fn pitch(item: &MenuItem, price: &str) -> (String, String) {
         "sides" => ("Craving something crispy?".into(), format!("Add {name} for just {price}.")),
         "drinks" => ("Thirsty?".into(), format!("An ice-cold {name} goes great with your meal.")),
         "desserts" => ("Save room for dessert!".into(), format!("A {name} is the perfect sweet finish.")),
-        _ => ("You might also like".into(), format!("{name} — only {price}.")),
+        _ => ("You might also like".into(), format!("{name}, only {price}.")),
     }
 }
 

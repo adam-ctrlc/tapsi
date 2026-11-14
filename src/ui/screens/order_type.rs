@@ -7,7 +7,7 @@ use crate::ui::paint;
 use crate::ui::theme::{heavy, regular, CREAM, INK, MUTED};
 use crate::ui::widgets::{nav_bar, Nav, Step, Tile};
 
-/// "Where will you be eating today?" — Dine In or Take Out.
+/// "Where will you be eating today?" - Dine In or Take Out.
 pub struct OrderTypePicker;
 
 impl View for OrderTypePicker {
