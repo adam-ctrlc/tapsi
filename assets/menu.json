@@ -1,0 +1,151 @@
+{
+  "store_name": "Sunny Bites",
+  "tagline": "Crispy. Saucy. Happy.",
+  "currency_symbol": "₱",
+
+  "categories": [
+    { "id": "best",     "name": "Best Sellers", "icon": "⭐", "show_tagged": true },
+    { "id": "chicken",  "name": "Chicken",      "icon": "🍗" },
+    { "id": "burgers",  "name": "Burgers",      "icon": "🍔" },
+    { "id": "pasta",    "name": "Pasta",        "icon": "🍝" },
+    { "id": "rice",     "name": "Rice Meals",   "icon": "🍚" },
+    { "id": "sides",    "name": "Sides",        "icon": "🍟" },
+    { "id": "drinks",   "name": "Drinks",       "icon": "🍹" },
+    { "id": "desserts", "name": "Desserts",     "icon": "🍦" }
+  ],
+
+  "option_groups": {
+    "flavor": {
+      "title": "Chicken flavor", "required": true,
+      "choices": [ { "name": "Original Crispy" }, { "name": "Spicy" }, { "name": "Honey Garlic", "price": 15 } ]
+    },
+    "chicken_part": {
+      "title": "Chicken part", "required": true,
+      "choices": [ { "name": "Any part" }, { "name": "Drumstick", "price": 10 }, { "name": "Thigh", "price": 10 }, { "name": "Breast", "price": 15 } ]
+    },
+    "rice": {
+      "title": "Rice", "required": true,
+      "choices": [ { "name": "Plain Rice" }, { "name": "Garlic Rice", "price": 10 }, { "name": "Extra Rice", "price": 25 } ]
+    },
+    "drink": {
+      "title": "Choose your drink", "required": true,
+      "choices": [ { "name": "Iced Tea" }, { "name": "Cola" }, { "name": "Bottled Water" }, { "name": "Pineapple Juice", "price": 15 }, { "name": "Orange Juice", "price": 15 } ]
+    },
+    "drink_size": {
+      "title": "Drink size", "required": true,
+      "choices": [ { "name": "Regular" }, { "name": "Large", "price": 20 } ]
+    },
+    "side_upgrade": {
+      "title": "Add a side", "required": false,
+      "choices": [ { "name": "Regular Fries", "price": 35 }, { "name": "Mashed Potato", "price": 30 }, { "name": "Buttered Corn", "price": 30 } ]
+    },
+    "fries_size": {
+      "title": "Size", "required": true,
+      "choices": [ { "name": "Regular" }, { "name": "Large", "price": 25 }, { "name": "Jumbo", "price": 45 } ]
+    },
+    "burger_addons": {
+      "title": "Add-ons", "required": false, "max": 3,
+      "choices": [ { "name": "Extra Cheese", "price": 15 }, { "name": "Bacon", "price": 25 }, { "name": "Fried Egg", "price": 15 }, { "name": "Extra Patty", "price": 45 } ]
+    },
+    "pasta_addons": {
+      "title": "Add-ons", "required": false, "max": 2,
+      "choices": [ { "name": "Extra Cheese", "price": 15 }, { "name": "Garlic Bread", "price": 25 }, { "name": "1-pc Crispy Chicken", "price": 85 } ]
+    },
+    "sundae_flavor": {
+      "title": "Sundae flavor", "required": true,
+      "choices": [ { "name": "Chocolate" }, { "name": "Caramel" }, { "name": "Strawberry" } ]
+    },
+    "toppings": {
+      "title": "Toppings", "required": false, "max": 2,
+      "choices": [ { "name": "Crushed Nuts", "price": 10 }, { "name": "Sprinkles", "price": 5 }, { "name": "Cookie Crumbs", "price": 10 } ]
+    }
+  },
+
+  "items": [
+    { "id": "chicken-1pc", "category": "chicken", "name": "1-pc Crispy Chicken Meal", "price": 129, "icon": "🍗", "tag": "Best Seller",
+      "description": "Golden, juicy fried chicken with rice and a drink.",
+      "options": ["flavor", "chicken_part", "rice", "drink", "drink_size", "side_upgrade"] },
+    { "id": "chicken-2pc", "category": "chicken", "name": "2-pc Crispy Chicken Meal", "price": 219, "icon": "🍗",
+      "description": "Two pieces of crispy chicken with rice and a drink.",
+      "options": ["flavor", "rice", "drink", "drink_size", "side_upgrade"] },
+    { "id": "chicken-bucket", "category": "chicken", "name": "6-pc Chicken Bucket", "price": 499, "icon": "🍗", "tag": "Good for Sharing",
+      "description": "Six pieces of crispy chicken for the whole barkada.",
+      "options": ["flavor"] },
+    { "id": "chicken-strips", "category": "chicken", "name": "Chicken Strips (5 pcs)", "price": 149, "icon": "🍗",
+      "description": "Boneless strips with honey-mustard dip." },
+
+    { "id": "burger-cheese", "category": "burgers", "name": "Classic Cheeseburger", "price": 65, "icon": "🍔", "tag": "Best Seller",
+      "description": "Beef patty, cheese, pickles and our sunny sauce.",
+      "options": ["burger_addons"] },
+    { "id": "burger-double", "category": "burgers", "name": "Double Cheeseburger", "price": 109, "icon": "🍔",
+      "description": "Two beef patties and double cheese.",
+      "options": ["burger_addons"] },
+    { "id": "burger-chicken", "category": "burgers", "name": "Crispy Chicken Sandwich", "price": 125, "icon": "🍔",
+      "description": "Crispy chicken fillet, lettuce and mayo on a toasted bun.",
+      "options": ["burger_addons"] },
+    { "id": "burger-meal", "category": "burgers", "name": "Cheeseburger Meal", "price": 159, "icon": "🍔",
+      "description": "Cheeseburger with fries and a drink.",
+      "options": ["burger_addons", "fries_size", "drink", "drink_size"] },
+
+    { "id": "pasta-sweet", "category": "pasta", "name": "Sweet-Style Spaghetti", "price": 75, "icon": "🍝", "tag": "Best Seller",
+      "description": "Filipino-style sweet sauce with sliced hotdog and cheese.",
+      "options": ["pasta_addons"] },
+    { "id": "pasta-combo", "category": "pasta", "name": "Spaghetti & Chicken Combo", "price": 169, "icon": "🍝",
+      "description": "Sweet-style spaghetti with 1-pc crispy chicken and a drink.",
+      "options": ["flavor", "chicken_part", "drink", "drink_size"] },
+    { "id": "pasta-carbonara", "category": "pasta", "name": "Creamy Carbonara", "price": 95, "icon": "🍝",
+      "description": "Creamy white sauce with bacon bits and mushrooms.",
+      "options": ["pasta_addons"] },
+
+    { "id": "rice-steak", "category": "rice", "name": "Beef Burger Steak", "price": 89, "icon": "🍚",
+      "description": "Beef patty smothered in mushroom gravy, served with rice.",
+      "options": ["rice"] },
+    { "id": "rice-bbq", "category": "rice", "name": "Pork BBQ with Rice", "price": 119, "icon": "🍢",
+      "description": "Two sweet-glazed pork skewers grilled over charcoal.",
+      "options": ["rice"] },
+    { "id": "rice-adobo", "category": "rice", "name": "Chicken Adobo Bowl", "price": 109, "icon": "🍛", "tag": "New",
+      "description": "Soy-vinegar braised chicken with a soft-boiled egg.",
+      "options": ["rice"] },
+
+    { "id": "side-fries", "category": "sides", "name": "French Fries", "price": 49, "icon": "🍟",
+      "description": "Crispy, lightly salted fries.",
+      "options": ["fries_size"] },
+    { "id": "side-mash", "category": "sides", "name": "Mashed Potato", "price": 45, "icon": "🥔",
+      "description": "Creamy mash with gravy." },
+    { "id": "side-corn", "category": "sides", "name": "Buttered Corn", "price": 45, "icon": "🌽",
+      "description": "Sweet corn kernels in butter." },
+    { "id": "side-rice", "category": "sides", "name": "Extra Rice", "price": 25, "icon": "🍚",
+      "description": "One cup of steamed rice." },
+
+    { "id": "drink-tea", "category": "drinks", "name": "Iced Tea", "price": 45, "icon": "🍹",
+      "description": "House-brewed lemon iced tea.", "options": ["drink_size"] },
+    { "id": "drink-cola", "category": "drinks", "name": "Cola", "price": 45, "icon": "🥤",
+      "description": "Ice-cold cola.", "options": ["drink_size"] },
+    { "id": "drink-pineapple", "category": "drinks", "name": "Pineapple Juice", "price": 55, "icon": "🍍",
+      "description": "Sweet pineapple juice.", "options": ["drink_size"] },
+    { "id": "drink-coffee", "category": "drinks", "name": "Hot Coffee", "price": 50, "icon": "☕",
+      "description": "Freshly brewed coffee." },
+    { "id": "drink-water", "category": "drinks", "name": "Bottled Water", "price": 30, "icon": "💧",
+      "description": "500 mL purified water." },
+
+    { "id": "dessert-sundae", "category": "desserts", "name": "Sundae", "price": 45, "icon": "🍨", "tag": "Best Seller",
+      "description": "Creamy vanilla soft-serve with your choice of syrup.",
+      "options": ["sundae_flavor", "toppings"] },
+    { "id": "dessert-cone", "category": "desserts", "name": "Soft-Serve Cone", "price": 20, "icon": "🍦",
+      "description": "Classic vanilla soft-serve." },
+    { "id": "dessert-flan", "category": "desserts", "name": "Leche Flan", "price": 55, "icon": "🍮",
+      "description": "Silky caramel custard." },
+    { "id": "dessert-cake", "category": "desserts", "name": "Chocolate Cake Slice", "price": 75, "icon": "🍰",
+      "description": "Moist chocolate cake with fudge frosting." },
+    { "id": "dessert-halo", "category": "desserts", "name": "Halo-Halo", "price": 99, "icon": "🍧", "tag": "New",
+      "description": "Shaved ice, sweet beans, fruits, leche flan and ube." }
+  ],
+
+  "upsell": ["side-fries", "dessert-sundae", "drink-tea", "dessert-cone"],
+
+  "promo": {
+    "title": "Bucket Feast",
+    "subtitle": "6 pieces of crispy chicken for the whole barkada. Tap to order!",
+    "item": "chicken-bucket"
+  }
+}
